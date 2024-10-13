@@ -1,32 +1,143 @@
-.container {
-    text-align: center;
-    margin: 0 auto;
-    width: 400px;
+/* Reseta estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-form {
+/* Cores principais */
+:root {
+    --roxo-claro: #e0e0eb; /* Roxo claro */
+    --roxo-médio: #8b00ff; /* Roxo médio */
+    --roxo-escuro: #4b0082; /* Roxo escuro */
+    --roxo-escuro-2: #2e003e; /* Roxo muito escuro */
+    --cinza-claro: #7e7474;
+    --cinza-texto: #222222;
+}
+
+/* Estilos do Body */
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--roxo-claro) !important;
+}
+
+/* Estilos do Header */
+header {
+    background-color: var(--roxo-médio);
+    padding: 15px;
+    color: var(--roxo-escuro);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex; /* Permite que a imagem e o título fiquem na mesma linha */
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+}
+
+.logo img {
+    height: 40px; /* Ajuste a altura conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.logo h1 {
+    font-size: 24px; /* Tamanho do título */
+    font-weight: bold; /* Espessura do texto */
+    color: var(--roxo-claro); /* Cor do texto do título */
+}
+
+/* Estilos do Main */
+.container {
+    flex: 1;
+    padding: 40px 20px;
+    color: var(--cinza-texto);
+    text-align: center;
+}
+
+/* Estilo para o formulário de login */
+.form-login {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: var(--roxo-escuro-2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-login h2 {
+    font-size: 24px;
+    color: var(--roxo-claro);
+    margin-bottom: 20px;
+}
+
+.form-login label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-login input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Botões de Login e Cadastro */
+.button-group {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
+.button-group button {
+    width: 48%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 20px;
+    background-color: var(--roxo-médio);
     border: none;
+    color: var(--roxo-claro);
+    font-size: 16px;
+    font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
+}
 
+.button-group button:hover {
+    background-color: var(--roxo-escuro);
+}
+
+/* Estilos do Footer */
+footer {
+    background-color: var(--roxo-escuro);
+    color: var(--roxo-claro);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }

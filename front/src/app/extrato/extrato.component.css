@@ -1,0 +1,133 @@
+/* Reseta estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Cores principais */
+:root {
+    --roxo-claro: #e0e0eb; /* Roxo claro */
+    --roxo-médio: #8b00ff; /* Roxo médio */
+    --roxo-escuro: #4b0082; /* Roxo escuro */
+    --roxo-escuro-2: #2e003e; /* Roxo muito escuro */
+    --cinza-claro: #7e7474;
+    --cinza-texto: #222222;
+}
+
+/* Estilos do Body */
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--roxo-claro) !important;
+}
+
+/* Estilos do Main Container */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--roxo-escuro-2);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--roxo-claro);
+    text-align: center;
+}
+
+/* Título da Página */
+.container h1 {
+    font-size: 28px;
+    color: var(--roxo-claro);
+    margin-bottom: 20px;
+}
+
+/* Estilos do Formulário */
+#extrato-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: var(--roxo-claro);
+}
+
+#extrato-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Botão de Consultar Extrato */
+#extrato-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--roxo-médio);
+    border: none;
+    color: var(--roxo-claro);
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#extrato-form button:hover {
+    background-color: var(--roxo-escuro);
+}
+
+/* Seção de Resultados */
+#resultado-extrato {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#resultado-extrato h2 {
+    color: var(--roxo-claro);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#resultado-extrato p {
+    font-size: 18px;
+    color: var(--cinza-texto);
+    margin-bottom: 20px;
+}
+
+/* Tabela de Transações */
+#tabela-transacoes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#tabela-transacoes th, #tabela-transacoes td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+#tabela-transacoes th {
+    background-color: var(--roxo-escuro);
+    color: var(--roxo-claro);
+    font-weight: bold;
+}
+
+#tabela-transacoes td {
+    background-color: #fff;
+    color: var(--cinza-texto);
+}
+
+#tabela-transacoes tr:hover {
+    background-color: var(--roxo-claro);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

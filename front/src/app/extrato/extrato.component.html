@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="extrato.component.css"> <!-- Certifique-se de que o caminho está correto -->
+    <title>Extrato Bancário</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Extrato Bancário</h1>
+  
+            <form id="extrato-form">
+                <label for="data-inicio">Data de início:</label>
+                <input type="date" id="data-inicio" name="data-inicio" required>
+  
+                <label for="data-fim">Data de fim:</label>
+                <input type="date" id="data-fim" name="data-fim" required>
+  
+                <button type="submit">Consultar Extrato</button>
+            </form>
+  
+            <div id="resultado-extrato">
+                <h2>Seu Extrato</h2>
+                <p>Saldo atual: R$ <span id="saldo-atual"></span></p>
+                <table id="tabela-transacoes">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

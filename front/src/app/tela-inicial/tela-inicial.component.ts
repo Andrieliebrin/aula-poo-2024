@@ -3,10 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-tela-inicial',
   standalone: true,
-  imports: [],
   templateUrl: './tela-inicial.component.html',
-  styleUrl: './tela-inicial.component.css'
+  styleUrls: ['./tela-inicial.component.css'] // Corrigido de styleUrl para styleUrls
 })
 export class TelaInicialComponent {
-
+  // Aqui você pode adicionar lógica adicional, se necessário
 }

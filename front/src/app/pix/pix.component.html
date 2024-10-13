@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pix.component.css"> <!-- Certifique-se de que o caminho está correto -->
+    <title>Pagamento PIX - NEOBank</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Realizar Pagamento PIX</h1>
+
+            <form id="pix-form">
+                <label for="tipo-chave">Selecione o tipo de chave PIX:</label>
+                <select id="tipo-chave" name="tipo-chave" required>
+                    <option value="cpf">CPF</option>
+                    <option value="telefone">Número de telefone</option>
+                    <option value="aleatoria">Chave aleatória</option>
+                    <option value="qrcode">QR Code</option>
+                </select>
+
+                <label for="chave-pix">Informe a chave PIX:</label>
+                <input type="text" id="chave-pix" name="chave-pix" required>
+
+                <button type="submit">Confirmar Pagamento</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

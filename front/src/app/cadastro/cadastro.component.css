@@ -51,92 +51,38 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Formulário para o saldo */
-.form-saldo {
-    max-width: 300px;
+/* Formulário de Cadastro */
+.form-cadastro {
+    max-width: 400px;
     margin: 20px auto;
-    background-color: var(--lilas); /* Fundo lilás */
+    background-color: var(--lilas);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: var(--roxo-claro); /* Cor do texto em roxo claro */
 }
 
-.form-saldo label {
+/* Estilo para as labels */
+.form-cadastro label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Diminui o espaçamento entre a label e a caixa */
     font-weight: bold;
-    color: var(--roxo-claro);
+    color: var(--roxo-escuro);
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
-.form-saldo .saldo {
-    display: flex;
-    justify-content: flex-end; /* Alinha o saldo à direita */
-    font-size: 24px; /* Tamanho do texto do saldo */
-    margin-top: 20px;
-}
-
-.form-saldo input {
+/* Estilo para os inputs */
+.form-cadastro input {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
+    margin-bottom: 15px; /* Mantém o espaçamento confortável entre cada campo */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     color: var(--cinza-texto);
 }
 
-/* Estilos do Navegação */
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    margin: 15px 0;
-}
-
-nav ul li a {
-    color: var(--roxo-escuro);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-nav ul li a:hover {
-    color: var(--cinza-claro);
-}
-
-/* Estilo para o formulário de funcionalidades */
-.form-funcionalidade {
-    max-width: 400px;
-    margin: 20px auto;
-    background-color: var(--roxo-escuro-2);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.form-funcionalidade h3 {
-    font-size: 20px;
-    color: var(--roxo-claro);
-    margin-bottom: 15px;
-}
-
-.form-funcionalidade label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.form-funcionalidade select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.form-funcionalidade button {
+/* Estilo para o botão */
+.form-cadastro button {
     width: 100%;
     padding: 10px;
     background-color: var(--roxo-médio);
@@ -145,11 +91,10 @@ nav ul li a:hover {
     font-size: 16px;
     font-weight: bold;
     border-radius: 4px;
-    margin-top: 20px;
     cursor: pointer;
 }
 
-.form-funcionalidade button:hover {
+.form-cadastro button:hover {
     background-color: var(--roxo-escuro);
 }
 
@@ -166,15 +111,5 @@ footer {
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
     }
 }

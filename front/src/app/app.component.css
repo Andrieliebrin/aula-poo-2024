@@ -1,95 +1,196 @@
+/* Reseta estilos padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
 }
 
+/* Cores principais */
+:root {
+    --roxo-claro: #e0e0eb; /* Roxo claro */
+    --roxo-médio: #8b00ff; /* Roxo médio */
+    --roxo-escuro: #4b0082; /* Roxo escuro */
+    --roxo-escuro-2: #2e003e; /* Roxo muito escuro */
+    --cinza-claro: #7e7474;
+    --cinza-texto: #222222;
+}
+
+/* Estilos do Body */
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--roxo-claro) !important;
+}
+
+/* Estilos do Header */
 header {
-    background-color: #b700ff;
-    color: #fff;
-    padding: 10px 0;
+    background-color: var(--roxo-médio);
+    padding: 15px;
+    color: var(--roxo-escuro);
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 
-header .logo {
+/* Logo */
+.logo {
     display: flex;
-    align-items: center;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
 }
 
-header .logo img {
-    width: 50px;
-    height: 30px;
-    margin-right: 10px;
+.logo img {
+    height: 40px; /* Ajuste a altura conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
 }
 
-header .logo h1 {
-    font-size: 24px;
+.logo h1 {
+    font-size: 24px; /* Tamanho do título */
+    font-weight: bold; /* Espessura do texto */
+    color: var(--roxo-claro); /* Cor do texto do título */
 }
 
+/* Navegação */
 nav ul {
-    list-style: none;
     display: flex;
+    list-style-type: none; /* Remove marcadores de lista */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin-right: 20px; /* Espaço entre os itens */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
+    text-decoration: none; /* Remove o sublinhado */
+    color: var(--roxo-claro); /* Cor padrão do texto */
+    transition: color 0.3s; /* Animação suave para a mudança de cor */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: var(--roxo-escuro); /* Cor ao passar o mouse */
 }
 
-main {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 5px;
+/* Estilos do Bem-vindo */
+#bem-vindo {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 40px; /* Espaçamento abaixo */
 }
 
-main .welcome h2 {
-    font-size: 28px;
-    color: #b700ff;
+#bem-vindo h2 {
+    font-size: 36px; /* Tamanho maior para o título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    color: var(--roxo-escuro); /* Cor do título */
 }
 
-main .welcome p {
-    font-size: 16px;
+#bem-vindo p {
+    font-size: 18px; /* Tamanho menor para o parágrafo */
+    color: var(--cinza-texto); /* Cor do texto do parágrafo */
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
+/* Estilos do Main */
 .container {
+    flex: 1;
+    padding: 40px 20px;
+    color: var(--cinza-texto);
+    text-align: center;
+}
+
+/* Container principal para os formulários */
+.forms-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os formulários no topo */
+    gap: 20px; /* Espaçamento entre os formulários */
 }
 
-.form-section {
-    flex: 1;
+/* Estilo para os formulários */
+.form-login, .form-cadastro, .form-info {
+    width: 300px;
+    height: auto; /* Altura automática para permitir flexibilidade */
+    background-color: var(--roxo-escuro-2);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--roxo-claro);
+    transition: background-color 0.3s, color 0.3s; /* Adiciona transição suave */
+    text-align: left; /* Alinha todo o texto à esquerda */
 }
 
-.info-section {
-    flex: 1;
+.form-login:hover, .form-cadastro:hover, .form-info:hover {
+    background-color: #ffffff; /* Muda a cor de fundo para branco */
+    color: var(--roxo-escuro); /* Muda a cor do texto para roxo */
+}
+
+.form-login h2, .form-cadastro h2, .form-info h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--roxo-claro);
+    text-align: left; /* Centraliza o texto à esquerda */
+}
+
+.form-login input, .form-cadastro input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Botões */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.button-group button {
+    width: 80%;
+    align-self: center;
+    padding: 10px;
+    background-color: var(--roxo-escuro);
+    border: none;
+    color: var(--roxo-claro);
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    background-color: var(--roxo-escuro-2);
+}
+
+/* Estilos do Footer */
+footer {
+    background-color: var(--roxo-escuro);
+    color: var(--roxo-claro);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .forms-container {
+        flex-direction: column; /* Empilha os formulários em telas menores */
+        align-items: center;
+    }
+
+    .form-login, .form-cadastro, .form-info {
+        width: 80%;
+    }
 }

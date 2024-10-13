@@ -1,20 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.component.css">
+    <title>NEOBank: Bem-vindo ao futuro financeiro!</title>
+</head>
+
 <body>
     <header>
-        <div class="logo">
-            <img src="images/nub.png" alt="Logo do Nubank">
-            <h1>NUBANK</h1>
+        <div class="header-container">
+            <div class="logo">
+                <img src="neobank.png" alt="Logo do NEOBank" class="logo-img">
+            </div>
+            <nav>
+                <ul>
+                    <li class="service-item"><a href="#servicos">Serviços</a></li>
+                    <li class="service-item"><a href="#vantagens">Trabalhe conosco</a></li>
+                    <li class="service-item"><a href="#sobre">Entre em contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Pessoa Física</a></li>
-                <li><a href="#">Pessoa Jurídica</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <router-outlet></router-outlet>
+    <main class="container">
+        <section id="bem-vindo">
+            <h2>Bem-vindo ao NEOBank</h2>
+            <p>Seu futuro financeiro começa aqui! Descubra um novo jeito de gerenciar suas finanças com facilidade e segurança.</p>
+        </section>
+
+        <div class="forms-container"> <!-- Adicionada div para alinhar os formulários -->
+            <section id="servicos" class="form-login">
+                <h2>Nossos Serviços</h2>
+                <ul>
+                    <li>Contas Correntes e Poupança</li>
+                    <li>Cartão de Crédito sem Anuidade</li>
+                    <li>Empréstimos Pessoais e Empresariais</li>
+                    <li>Investimentos e Previdência</li>
+                    <li>Pagamentos e Transferências Rápidas</li>
+                </ul>
+            </section>
+
+            <section id="vantagens" class="form-login">
+                <h2>Vantagens de ser NEOBank</h2>
+                <ul>
+                    <li>Atendimento 24/7 via Chat e WhatsApp</li>
+                    <li>Aplicativo Completo para Gerenciamento de Conta</li>
+                    <li>Baixas Tarifas e Nenhuma Pegadinha</li>
+                    <li>Cashback em Compras e Benefícios Exclusivos</li>
+                    <li>Segurança Total com Autenticação Biométrica</li>
+                </ul>
+            </section>
+
+            <section id="sobre" class="form-login">
+                <h2>Sobre Nós</h2>
+                <p>No NEOBank, trabalhamos para facilitar a sua vida financeira. Com tecnologia de ponta, oferecemos soluções que vão além dos bancos tradicionais, garantindo mais transparência, controle e autonomia para você gerenciar suas finanças como desejar.</p>
+                <p>Faça parte da revolução bancária. Venha para o NEOBank!</p>
+            </section>
+
+            <!-- Novo formulário lilás para os botões -->
+            <section class="form-botao">
+                <div class="button-group">
+                    <button (click)="navigateToLogin()">Acessar minha conta</button>
+                    <button (click)="navigateToCadastro()">Cadastre-se</button>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <footer>
-        <p>NUBANK SA CNPJ 00.345.567/0001</p>
+        <p>NEOBank SA CNPJ 00.345.567/0001</p>
     </footer>
+
 </body>
+
+</html>

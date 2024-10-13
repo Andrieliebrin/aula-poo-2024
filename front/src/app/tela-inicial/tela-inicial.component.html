@@ -1,22 +1,52 @@
-<main>
-    <div class="welcome">
-        <h2>Boas vindas!</h2>
-        <p>Este é o site do banco Nubank</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tela-inicial.component.css"> <!-- Link para o CSS -->
+  <title>NEOBank</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <h1>NEOBank: Seu futuro financeiro!</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="form-saldo">
+      <form id="saldo-form">
+        <label for="saldo">Saldo Atual:</label>
+        <div class="saldo">
+          <span>R$</span>
+          <span id="valor-saldo">1.250,00</span>
+        </div>
+      </form>
     </div>
 
-    <section class="abertura-conta">
-        <h2>Abra sua conta agora!</h2>
-        <form action="processar_dados.php" method="post">
-            <label for="nome">Nome completo: </label>
-            <input type="text" id="nome" name="nome" required>
+    <div class="form-funcionalidade">
+      <h3>Menu de funcionalidades</h3>
+      <form id="funcionalidade-form">
+        <label for="acao">Escolha a ação:</label>
+        <select id="acao" name="acao" required>
+          <option value="extrato">Verificar meu extrato</option>
+          <option value="pix">Realizar PIX</option>
+          <option value="recarga">Recarga de celular</option>
+          <option value="investimentos">Investimentos</option>
+          <option value="seguros">Seguros</option>
+          <option value="pagar_conta">Pagar uma conta</option>
+          <option value="simular_imprest">Simular impréstimo</option>
+        </select>
+        <button type="submit">Confirmar Ação</button>
+      </form>
+    </div>
+  </main>
 
-            <label for="cpf"> CPF: </label>
-            <input type="text"   id="cpf" name="cpf" required>
+  <footer>
+    <p>&copy; 2024 Seu Banco. Todos os direitos reservados.</p>
+  </footer>
+</body>
 
-            <label for="email"> Informe seu e-mail: </label>
-            <input type="email" id="email" name="email" required>
-
-            <button type="submit"> Entrar </button>
-        </form>
-    </section>
-</main>
+</html>
