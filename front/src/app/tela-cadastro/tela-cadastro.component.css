@@ -1,0 +1,100 @@
+/* Estilo do contêiner principal */
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #D25A29; /* Define o fundo terracota */
+}
+
+.titulo {
+    color: #00720d; /* Cor das letras em verde oliva */
+    text-align: center;
+    margin-top: 50px; /* Espaçamento superior */
+    font-size: 20px; /* Tamanho do título reduzido para 20px */
+}
+
+/* Contêiner para centralizar o formulário */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    align-items: center; /* Centraliza horizontalmente */
+    margin: 50px auto; /* Centraliza verticalmente */
+    width: 420px;
+    background-color: #F2E0D5; /* Fundo em bege mais alaranjado claro */
+    border: 2px solid transparent;
+    backdrop-filter: blur(20px);
+    font-size: 36px;
+    border-radius: 10px;
+    padding: 30px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Estilo para os campos de input */
+.campo__cadastro {
+    width: 100%;
+    margin: 10px 0; /* Espaçamento vertical entre os campos */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #00720d; /* Cor da borda em verde oliva */
+    background-color: transparent; /* Fundo transparente */
+    color: #00720d; /* Cor do texto em verde oliva */
+    border-radius: 10px; /* Bordas arredondadas */
+    outline: none; /* Remove o outline ao focar */
+}
+
+/* Estilo para o botão de Cadastrar */
+.campo__cadastro__salvar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 22px;
+    background-color: #00720d; /* Cor de fundo em verde oliva */
+    color: #D25A29; /* Cor do texto em terracota */
+    border: none;
+    cursor: pointer;
+
+    /* Centralizando o texto dentro do botão */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center;
+    border-radius: 10px;
+}
+
+.campo__cadastro__salvar:hover {
+    background-color: #A9A9A9; /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo para os campos de input ao passar o mouse ou focar */
+.campo__cadastro:hover,
+.campo__cadastro:focus {
+    border-color: #00720d; /* Muda a cor da borda ao passar o mouse ou focar */
+}
+
+/* Estilo para o botão de Voltar */
+.campo__cadastro__voltar {
+    margin-top: 20px; /* Adicione espaço acima do botão */
+    width: 100%; /* Largura total do botão */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #00720d; /* Cor de fundo em verde oliva */
+    color: #D25A29; /* Cor do texto em terracota */
+    border: none; /* Remover borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-size: 22px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+    
+    /* Centralizando o texto dentro do botão */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+.campo__cadastro__voltar:hover {
+    background-color: #A9A9A9; /* Cor ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}

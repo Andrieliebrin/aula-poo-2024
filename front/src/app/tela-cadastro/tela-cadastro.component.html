@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="telacadastro">
+        <div class="form-container">
+            <h2>Informe seus dados</h2>
+            <input pInputText type="text" [(ngModel)]="dadosCadastrais.nome" class="campo__cadastro" placeholder="NOME COMPLETO">  
+            <input pInputText type="text" [(ngModel)]="dadosCadastrais.cpf_cnpj" class="campo__cadastro" placeholder="CPF"> 
+            <input pInputText type="email" [(ngModel)]="dadosCadastrais.email" class="campo__cadastro" placeholder="E-MAIL"> 
+            <input pInputText type="date" [(ngModel)]="dadosCadastrais.dataNascimento" class="campo__cadastro" placeholder="DATA DE NASCIMENTO"> 
+            <input pInputText type="password" [(ngModel)]="dadosCadastrais.senha" class="campo__cadastro" placeholder="SENHA">
+            <button pButton (click)="clickSalvar()" class="campo__cadastro__salvar">Cadastrar</button>
+            <button pButton (click)="voltar()" class="campo__cadastro__voltar">Voltar</button> <!-- Botão de voltar -->
+        </div>
+    </div>
+</div>

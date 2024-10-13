@@ -1,4 +1,3 @@
-
 export interface Transacao {
     numero: number;
     descricao: string;

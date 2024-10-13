@@ -1,180 +1,179 @@
-/* Reseta estilos padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Cores principais */
-:root {
-    --roxo-claro: #e0e0eb; /* Roxo claro */
-    --roxo-médio: #8b00ff; /* Roxo médio */
-    --roxo-escuro: #4b0082; /* Roxo escuro */
-    --roxo-escuro-2: #2e003e; /* Roxo muito escuro */
-    --lilas: #bc79ff; /* Tom de lilás */
-    --preto: #000000; /* Preto */
-    --cinza-claro: #7e7474;
-    --cinza-texto: #222222;
-}
-
-/* Estilos do Body */
-body, html {
-    height: 100%;
+body {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--roxo-claro) !important;
+    justify-content: flex-start; /* Mantenha o conteúdo na parte superior */
+    background-color: #e98d58; /* Laranjinha claro */
 }
 
-/* Estilos do Header */
-header {
-    background-color: var(--roxo-médio);
-    padding: 15px;
-    color: var(--roxo-escuro);
-}
-
-.header-container {
+.cabecalho {
+    font-family: "Oswald", sans-serif;
+    width: 100%;
+    height: 130px;
+    color: white;
+    background-color: #D25A29; /* Terracota */
     display: flex;
-    justify-content: space-between;
+    align-items: center; /* Centraliza verticalmente */
+    padding-left: 20px;
+}
+
+.cabecalho__conteudo__botao {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-/* Estilos do Main */
-.container {
-    flex: 1;
-    padding: 40px 20px;
-    color: var(--cinza-texto);
-    text-align: center;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-/* Formulário para o saldo */
-.form-saldo {
-    max-width: 300px;
-    margin: 20px auto;
-    background-color: var(--lilas); /* Fundo lilás */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: var(--roxo-claro); /* Cor do texto em roxo claro */
-}
-
-.form-saldo label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: var(--roxo-claro);
-}
-
-.form-saldo .saldo {
-    display: flex;
-    justify-content: flex-end; /* Alinha o saldo à direita */
-    font-size: 24px; /* Tamanho do texto do saldo */
-    margin-top: 20px;
-}
-
-.form-saldo input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    color: var(--cinza-texto);
-}
-
-/* Estilos do Navegação */
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    margin: 15px 0;
-}
-
-nav ul li a {
-    color: var(--roxo-escuro);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-nav ul li a:hover {
-    color: var(--cinza-claro);
-}
-
-/* Estilo para o formulário de funcionalidades */
-.form-funcionalidade {
-    max-width: 400px;
-    margin: 20px auto;
-    background-color: var(--roxo-escuro-2);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.form-funcionalidade h3 {
-    font-size: 20px;
-    color: var(--roxo-claro);
-    margin-bottom: 15px;
-}
-
-.form-funcionalidade label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.form-funcionalidade select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.form-funcionalidade button {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--roxo-médio);
+    justify-content: center;
+    background-color: transparent;
     border: none;
-    color: var(--roxo-claro);
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 4px;
-    margin-top: 20px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cabecalho__conteudo__botao i {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.cabecalho__conteudo__botao span {
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+.cabecalho__conteudo__botao:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    color: yellow;
+}
+
+.cabecalho__conteudo {
+    margin-left: 20px; /* Alinha o texto com o botão de menu */
+    font-size: 40px;
+}
+
+.cabecalho__botao-sair {
+    margin-left: auto; /* Isso empurra o botão para a extrema direita */
+}
+
+.saldo {
+    font-family: "Oswald", sans-serif;
+    width: 350px; /* Aumente a largura conforme necessário */
+    height: auto; /* Mantém a altura automática */
+    padding: 30px; /* Aumente o padding para criar mais espaço interno */
+    border: 2px solid #00720d;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para distribuir o conteúdo dentro da caixa */
+    margin-left: auto; /* Empurra o saldo para a direita */
+}
+
+.saldo h2 {
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 10px;
+    font-size: 40px; /* Ajuste o tamanho da fonte se necessário */
+    color: #333;
+}
+
+.saldo-valor {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.saldo-valor-texto {
+    font-family: "Oswald", sans-serif;
+    font-size: 30px; /* Aumente o tamanho da fonte para o saldo */
+    color: #00720d; /* Verde oliva */
+    margin-top: 1px;
+    margin-right: 10px; /* Espaçamento entre o saldo e o ícone */
+}
+
+.saldo button {
+    font-family: "Oswald", sans-serif;
+    color: #ffffff; /* Azul */
+    font-size: 20px; /* Ajuste o tamanho da fonte se necessário */
+    background-color: #D25A29;
+    width: 100%;
+    height: 40px; /* Ajuste a altura se necessário */
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
 }
 
-.form-funcionalidade button:hover {
-    background-color: var(--roxo-escuro);
+.saldo button:hover {
+    background-color: #00720d;
+    color: yellow;
 }
 
-/* Estilos do Footer */
-footer {
-    background-color: var(--roxo-escuro);
-    color: var(--roxo-claro);
-    text-align: center;
-    padding: 10px 0;
+.sidebar {
+    position: fixed; /* Mudando para fixed para que a sidebar ocupe toda a altura */
+    top: 0; /* Alinha ao topo da página */
+    left: -250px; /* Posição inicial fora da tela */
+    width: 250px; /* Largura da barra lateral */
+    height: 100vh; /* Altura da barra lateral */
+    background-color: white; /* Cor de fundo da barra lateral */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 10px; /* Espaçamento interno */
+    z-index: 100; /* Para ficar acima de outros elementos */
+    transition: left 0.3s ease; /* Animação para a transição */
+}
+
+.sidebar.open {
+    left: 0; /* Alinha a sidebar na tela quando aberta */
+}
+
+.sidebar h2 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    display: block;
     width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f99168; /* Cor dos botões */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-    }
+.sidebar button:hover {
+    background-color: #D25A29; /* Cor ao passar o mouse */
+}
 
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
+.voltar-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px; /* Espaçamento acima do botão */
+    background-color: #D25A29; /* Cor do botão, pode ser a mesma do cabeçalho */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px; /* Arredondamento das bordas */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave */
+}
 
-    nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
+.voltar-button:hover {
+    background-color: #b04d1f; /* Cor mais escura ao passar o mouse */
+}
+
+.saldo i {
+    font-size: 2.5rem; /* Aumente o tamanho do ícone */
+    cursor: pointer; /* Indica que é clicável */
+    margin-left: 20px; /* Espaçamento à esquerda do ícone (ajuste conforme necessário) */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
 }

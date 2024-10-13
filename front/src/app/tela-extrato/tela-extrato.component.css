@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #e98d58; /* Laranjinha claro */
+}
+
+.cabecalho {
+    font-family: "Oswald", sans-serif;
+    width: 100%;
+    height: 130px;
+    color: white;
+    background-color: #D25A29; /* Terracota */
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.cabecalho__conteudo__botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cabecalho__conteudo__botao i {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.cabecalho__conteudo__botao span {
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+.cabecalho__conteudo__botao:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    color: yellow;
+}
+
+.cabecalho__conteudo {
+    margin-left: 20px; /* Alinha o texto com o botão de menu */
+    font-size: 40px;
+}
+
+.cabecalho__botao-sair {
+    margin-left: auto; /* Isso empurra o botão para a extrema direita */
+}
+
+.extrato-container {
+    font-family: "Oswald", sans-serif;
+    width: 80%; /* Ajuste conforme necessário */
+    margin: 20px auto; /* Centraliza o container */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.extrato-container h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.extrato-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.extrato-table th,
+.extrato-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.extrato-table th {
+    background-color: #D25A29; /* Terracota */
+    color: white;
+}
+
+.extrato-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Destaque ao passar o mouse */
+}
+
+.voltar-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px; /* Espaçamento acima do botão */
+    background-color: #D25A29; /* Cor do botão, pode ser a mesma do cabeçalho */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px; /* Arredondamento das bordas */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.voltar-button:hover {
+    background-color: #b04d1f; /* Cor mais escura ao passar o mouse */
+}

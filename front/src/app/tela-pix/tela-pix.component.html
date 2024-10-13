@@ -1,0 +1,29 @@
+<header class="cabecalho">
+    <button class="cabecalho__conteudo__botao p-button p-button-lg" (click)="voltar()">
+        <i class="pi pi-arrow-left" style="font-size: 2rem"></i>
+    </button>
+</header>
+
+<div class="pix-container">
+    <h2>Realizar Transferência</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="chaveTipo">Tipo de Chave</label>
+            <select id="chaveTipo" [(ngModel)]="tipoChave" name="tipoChave">
+                <option value="cpf">CPF</option>
+                <option value="email">E-mail</option>
+                <option value="celular">Celular</option>
+                <option value="chaveAleatoria">Chave Aleatória</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="chave">Chave</label>
+            <input type="text" id="chave" [(ngModel)]="chave" name="chave" required />
+        </div>
+        <div class="form-group">
+            <label for="valor">Valor</label>
+            <input type="number" id="valor" [(ngModel)]="valor" name="valor" required />
+        </div>
+        <button type="submit" class="pix-button">Enviar</button>
+    </form>
+</div>

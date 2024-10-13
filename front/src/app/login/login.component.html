@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.component.css">
-    <title>NEOBank: Seu futuro financeiro!</title>
+    <title>NEOBank</title>
+    <link rel="stylesheet" href="login.component.css"> <!-- Substitua "seu-arquivo.css" pelo nome do seu arquivo CSS -->
 </head>
-
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="neobank.png" alt="Logo do NEOBank">
+    <div class="centered-form">
+        <div class="container">
+
+            <!-- Opções de tipo de cliente como texto -->
+            <div class="tipo-cliente">
+                <span class="tipo-cliente__texto">Página inicial</span>
+                <span class="separador">|</span>
+                <span class="tipo-cliente__texto">Entre em contato</span>
+            </div>
+
+            <!-- Formulário de Login -->
+            <div class="formulario">
+                <h1 class="formulario__titulo">Bem-vindo!</h1> <!-- Adicionando título "Login" na caixa -->
+                <form action="">
+                    <div class="formulario__conteudo">
+                        <input type="text" class="campo__cadastro" placeholder="CPF/CNPJ" required>
+                    </div>
+                    <div class="formulario__conteudo">
+                        <input type="password" class="campo__cadastro" placeholder="Senha" required>
+                    </div>
+                    <div class="botoes">
+                        <button class="campo__cadastro__salvar w-100" type="button" (click)="fazerLogin()">Login</button>
+                        <button type="button" class="criar-conta" (click)="cadastrar()">Criar conta</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </header>
-
-    <main class="container">
-        <div class="form-login">
-            <h2>Seja bem-vindo!</h2>
-            <form (ngSubmit)="login()">
-                <label for="cpf">Informe seu CPF:</label>
-                <input type="text" id="cpf" name="cpf" [(ngModel)]="cpf" placeholder="Digite seu CPF" required aria-label="Digite seu CPF" />
-
-                <label for="senha">Informe sua Senha:</label>
-                <input type="password" id="senha" name="senha" [(ngModel)]="senha" placeholder="Digite sua Senha" required aria-label="Digite sua Senha" />
-
-                <div class="button-group">
-                    <button type="submit" id="login-button">Login</button>
-                    <button type="button" id="signup-button" (click)="navigateToCadastro()">Cadastre-se</button>
-                </div>
-            </form>
-        </div>
-    </main>
-
-    <footer>
-        <p>NEOBank SA CNPJ 00.345.567/0001</p>
-    </footer>
+    </div>
 </body>
-
 </html>

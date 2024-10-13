@@ -1,0 +1,81 @@
+/* Estilos gerais para o cabeçalho */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFCCB2; /* Cor do fundo do cabeçalho */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho__conteudo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo do container do formulário */
+.pix-container {
+    background-color: #FFCCB2; /* Fundo laranja clarinho */
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 400px; /* Tamanho máximo do formulário */
+    margin: 40px auto; /* Centraliza o formulário na página */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para os títulos dentro do container */
+.pix-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo dos grupos de formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilos para os rótulos dos campos */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%; /* Largura total do campo */
+    padding: 10px;
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 1rem;
+    appearance: none; /* Remove a aparência padrão */
+}
+
+/* Remove os spinners do campo de número */
+input[type="number"] {
+    appearance: none; /* Remove a aparência padrão para o número */
+}
+
+/* Estilo para o botão de envio */
+.pix-button {
+    width: 100%; /* Largura total do botão */
+    padding: 10px;
+    background-color: #4CAF50; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 1.1rem;
+    cursor: pointer; /* Mão ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+}
+
+/* Efeito hover para o botão */
+.pix-button:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+}
+

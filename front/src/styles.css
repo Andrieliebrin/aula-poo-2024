@@ -2,3 +2,14 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 @import 'primeflex/primeflex.scss';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;  
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,26 @@
+<header class="cabecalho">
+    <h1 class="cabecalho__conteudo">Extrato</h1>
+</header>
+
+<div class="extrato-container">
+    <h2>Histórico do Extrato</h2>
+    <table class="extrato-table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transacao of transacoes">
+                <td>{{ transacao.data }}</td>
+                <td>{{ transacao.descricao }}</td>
+                <td>{{ transacao.valor | currency }}</td>
+                <td>{{ transacao.tipo }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="voltar-button" (click)="voltar()">Voltar</button>
+</div>

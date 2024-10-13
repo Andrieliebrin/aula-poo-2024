@@ -1,30 +1,34 @@
 import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-import { Correntista } from '../../model/correntista';
-import { FormsModule } from '@angular/forms';
 import { CorrentistaService } from '../correntista.service';
-import { Router } from '@angular/router'; // Importa Router
+import { FormsModule } from '@angular/forms';
+import { Correntista } from '../../model/correntista';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
   imports: [InputTextModule, ButtonModule, FormsModule],
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  templateUrl: './tela-cadastro.component.html',
+  styleUrls: ['./tela-cadastro.component.css']
 })
 export class CadastroComponent {
-  public dadosCadastrais = new Correntista();
+
+  dadosCadastrais = new Correntista();
 
   constructor(
     private service: CorrentistaService,
-    private router: Router // Adiciona o Router
+    private router: Router
   ) {}
 
   clickSalvar(): void {
     this.service.cadastrar(this.dadosCadastrais).subscribe(resposta => {
       alert("Cadastrado com sucesso!");
-      this.router.navigate(['/tela-inicial']); // Redireciona para a tela inicial após cadastro
     });
+  }
+
+  voltar(): void {
+    this.router.navigate(['/tela-login']); // Redirecionar para a tela inicial ou a tela desejada
   }
 }

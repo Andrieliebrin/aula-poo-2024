@@ -1,52 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<header class="cabecalho">
+    <button class="cabecalho__conteudo__botao" (click)="toggleSidebar()">
+        <i class="pi pi-bars" style="font-size: 2rem;"></i>
+        <span>Menu</span>
+    </button>
+    <h1 class="cabecalho__conteudo">Olá, X</h1>
+    <button class="cabecalho__conteudo__botao cabecalho__botao-sair" (click)="sair()">
+        <i class="pi pi-sign-out" style="font-size: 2rem;"></i>
+        <span>Sair</span>
+    </button>
+</header>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="tela-inicial.component.css"> <!-- Link para o CSS -->
-  <title>NEOBank</title>
-</head>
-
-<body>
-  <header>
-    <div class="header-container">
-      <h1>NEOBank: Seu futuro financeiro!</h1>
+<div class="saldo">
+    <h2>Saldo da Conta</h2>
+    <div class="saldo-valor">
+        <span *ngIf="!saldoVisivel">*****</span>
+        <span *ngIf="saldoVisivel" class="saldo-valor-texto">R$ 1.000,00</span>
+        <i (click)="toggleSaldo()" class="pi" [ngClass]="{'pi-eye': !saldoVisivel, 'pi-eye-slash': saldoVisivel}" style="cursor: pointer; font-size: 2.5rem;"></i>
     </div>
-  </header>
+    <button type="button" (click)="extrato()">Extrato</button>
+</div>
 
-  <main class="container">
-    <div class="form-saldo">
-      <form id="saldo-form">
-        <label for="saldo">Saldo Atual:</label>
-        <div class="saldo">
-          <span>R$</span>
-          <span id="valor-saldo">1.250,00</span>
-        </div>
-      </form>
-    </div>
-
-    <div class="form-funcionalidade">
-      <h3>Menu de funcionalidades</h3>
-      <form id="funcionalidade-form">
-        <label for="acao">Escolha a ação:</label>
-        <select id="acao" name="acao" required>
-          <option value="extrato">Verificar meu extrato</option>
-          <option value="pix">Realizar PIX</option>
-          <option value="recarga">Recarga de celular</option>
-          <option value="investimentos">Investimentos</option>
-          <option value="seguros">Seguros</option>
-          <option value="pagar_conta">Pagar uma conta</option>
-          <option value="simular_imprest">Simular impréstimo</option>
-        </select>
-        <button type="submit">Confirmar Ação</button>
-      </form>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Seu Banco. Todos os direitos reservados.</p>
-  </footer>
-</body>
-
-</html>
+<div class="sidebar" [ngClass]="{'open': sidebarOpen}">
+    <h2>Operações</h2>
+    <button (click)="pix()">Pix</button>
+    <button (click)="sacar()">Saque</button>
+    <button (click)="recarga()">Recarga</button>
+    <button (click)="investir()">Investimentos</button>
+    <button class="voltar-button" (click)="toggleSidebar()">Voltar</button>
+</div>
