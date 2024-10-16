@@ -29,6 +29,6 @@ export class CadastroComponent {
   }
 
   voltar(): void {
-    this.router.navigate(['/tela-login']); // Redirecionar para a tela inicial ou a tela desejada
+    this.router.navigate(['/tela-login']);
   }
 }

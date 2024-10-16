@@ -8,8 +8,8 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Mantenha o conteúdo na parte superior */
-    background-color: #e98d58; /* Laranjinha claro */
+    justify-content: flex-start; 
+    background-color: #e98d58; 
 }
 
 .cabecalho {
@@ -17,9 +17,9 @@ body {
     width: 100%;
     height: 130px;
     color: white;
-    background-color: #D25A29; /* Terracota */
+    background-color: #D25A29; 
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
+    align-items: center; 
     padding-left: 20px;
 }
 
@@ -56,56 +56,56 @@ body {
 }
 
 .cabecalho__conteudo {
-    margin-left: 20px; /* Alinha o texto com o botão de menu */
+    margin-left: 20px; 
     font-size: 40px;
 }
 
 .cabecalho__botao-sair {
-    margin-left: auto; /* Isso empurra o botão para a extrema direita */
+    margin-left: auto; 
 }
 
 .saldo {
     font-family: "Oswald", sans-serif;
-    width: 350px; /* Aumente a largura conforme necessário */
-    height: auto; /* Mantém a altura automática */
-    padding: 30px; /* Aumente o padding para criar mais espaço interno */
+    width: 350px; 
+    height: auto;
+    padding: 30px; 
     border: 2px solid #00720d;
     border-radius: 20px;
     background-color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Para distribuir o conteúdo dentro da caixa */
-    margin-left: auto; /* Empurra o saldo para a direita */
+    justify-content: space-between; 
+    margin-left: auto; 
 }
 
 .saldo h2 {
     font-family: "Oswald", sans-serif;
     margin-bottom: 10px;
-    font-size: 40px; /* Ajuste o tamanho da fonte se necessário */
+    font-size: 40px; 
     color: #333;
 }
 
 .saldo-valor {
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
+    align-items: center; 
 }
 
 .saldo-valor-texto {
     font-family: "Oswald", sans-serif;
-    font-size: 30px; /* Aumente o tamanho da fonte para o saldo */
-    color: #00720d; /* Verde oliva */
+    font-size: 30px; 
+    color: #00720d; 
     margin-top: 1px;
-    margin-right: 10px; /* Espaçamento entre o saldo e o ícone */
+    margin-right: 10px; 
 }
 
 .saldo button {
     font-family: "Oswald", sans-serif;
-    color: #ffffff; /* Azul */
-    font-size: 20px; /* Ajuste o tamanho da fonte se necessário */
+    color: #ffffff; 
+    font-size: 20px; 
     background-color: #D25A29;
     width: 100%;
-    height: 40px; /* Ajuste a altura se necessário */
+    height: 40px; 
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -117,24 +117,24 @@ body {
 }
 
 .sidebar {
-    position: fixed; /* Mudando para fixed para que a sidebar ocupe toda a altura */
-    top: 0; /* Alinha ao topo da página */
-    left: -250px; /* Posição inicial fora da tela */
-    width: 250px; /* Largura da barra lateral */
-    height: 100vh; /* Altura da barra lateral */
-    background-color: white; /* Cor de fundo da barra lateral */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-    padding: 10px; /* Espaçamento interno */
-    z-index: 100; /* Para ficar acima de outros elementos */
-    transition: left 0.3s ease; /* Animação para a transição */
+    position: fixed; 
+    top: 0; 
+    left: -250px;
+    width: 250px; 
+    height: 100vh; 
+    background-color: white; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 10px; 
+    z-index: 100; 
+    transition: left 0.3s ease; 
 }
 
 .sidebar.open {
-    left: 0; /* Alinha a sidebar na tela quando aberta */
+    left: 0; 
 }
 
 .sidebar h2 {
-    font-size: 24px; /* Tamanho do título */
+    font-size: 24px; 
     margin-bottom: 10px;
 }
 
@@ -143,7 +143,7 @@ body {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
-    background-color: #f99168; /* Cor dos botões */
+    background-color: #f99168;
     color: white;
     border: none;
     border-radius: 5px;
@@ -152,28 +152,28 @@ body {
 }
 
 .sidebar button:hover {
-    background-color: #D25A29; /* Cor ao passar o mouse */
+    background-color: #D25A29; 
 }
 
 .voltar-button {
     width: 100%;
     padding: 10px;
-    margin-top: 20px; /* Espaçamento acima do botão */
-    background-color: #D25A29; /* Cor do botão, pode ser a mesma do cabeçalho */
-    color: white; /* Cor do texto */
+    margin-top: 20px; 
+    background-color: #D25A29; 
+    color: white; 
     border: none;
-    border-radius: 5px; /* Arredondamento das bordas */
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transição suave */
+    transition: background-color 0.3s; 
 }
 
 .voltar-button:hover {
-    background-color: #b04d1f; /* Cor mais escura ao passar o mouse */
+    background-color: #b04d1f; 
 }
 
 .saldo i {
-    font-size: 2.5rem; /* Aumente o tamanho do ícone */
-    cursor: pointer; /* Indica que é clicável */
-    margin-left: 20px; /* Espaçamento à esquerda do ícone (ajuste conforme necessário) */
-    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+    font-size: 2.5rem; 
+    cursor: pointer; 
+    margin-left: 20px; 
+    margin-bottom: 10px; 
 }

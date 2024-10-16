@@ -1,0 +1,26 @@
+<header class="cabecalho">
+    <button class="cabecalho__conteudo__botao voltar-button" (click)="voltar()">
+        <i class="pi pi-arrow-left" style="font-size: 2rem;"></i>
+        <span>Voltar</span>
+    </button>
+    <h1 class="cabecalho__conteudo">Investimentos</h1>
+</header>
+
+<div class="investimentos-container">
+    <h2>Simulador de Investimentos</h2>
+    <form class="simulador-form" (submit)="calcularRendimento(); $event.preventDefault()">
+        <div class="form-group">
+            <label for="aporteMensal">Valor de Aporte Mensal:</label>
+            <input type="number" id="aporteMensal" [(ngModel)]="aporteMensal" name="aporteMensal" required>
+        </div>
+        <div class="form-group">
+            <label for="dataResgate">Data Estimada de Resgate:</label>
+            <input type="date" id="dataResgate" [(ngModel)]="dataResgate" name="dataResgate" required>
+        </div>
+        <button type="submit">Calcular</button>
+    </form>
+
+    <div *ngIf="valorFinal !== null" class="resultado">
+        <h3>Valor Estimado do Rendimento: R$ {{ valorFinal | number: '1.2-2' }}</h3>
+    </div>
+</div>

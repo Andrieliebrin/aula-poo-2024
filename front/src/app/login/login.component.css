@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #D25A29; /* Fundo terracota */
+    background-color: #D25A29;
     width: 100%;
 }
 
@@ -35,24 +35,24 @@ body {
 }
 
 .tipo-cliente__texto {
-    color: #00720d; /* Verde especificado */
+    color: #00720d; 
     font-size: 16px;
     margin-left: 10px;
     transition: color 0.3s;
 }
 
 .tipo-cliente__texto:hover {
-    color: #A9A9A9; /* Cinza claro ao passar o mouse */
+    color: #A9A9A9; 
 }
 
 .separador {
-    color: #00720d; /* Verde para o separador */
+    color: #00720d; 
     margin: 0 10px;
 }
 
 .formulario {
     width: 420px;
-    background-color: #e6c2b8; /* Bege mais alaranjado claro */
+    background-color: #e6c2b8;
     border: 2px solid transparent;
     backdrop-filter: blur(20px);
     font-size: 36px;
@@ -63,7 +63,7 @@ body {
 }
 
 .formulario h1 {
-    color: #00720d; /* Verde para o título */
+    color: #00720d; 
     text-align: center;
     font-family: "Open Sans", sans-serif;
 }
@@ -80,13 +80,13 @@ body {
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid #00720d; /* Verde para bordas */
+    border: 2px solid #00720d; 
     border-radius: 40px;
     padding-left: 15px;
 }
 
 .formulario__conteudo input::placeholder {
-    color: #00720d; /* Verde para os placeholders */
+    color: #00720d;
 }
 
 .formulario .botoes {
@@ -98,20 +98,20 @@ body {
 .formulario button {
     width: 50%;
     height: 45px;
-    background-color: #00720d; /* Verde para botões */
+    background-color: #00720d;
     border: none;
     outline: none;
     border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-size: 16px;
-    color: #D25A29; /* Cor terracota para o texto dos botões */
+    color: #D25A29; 
     font-weight: 600;
 }
 
 .formulario button:hover {
-    background-color: #A9A9A9; /* Cinza claro ao passar o mouse */
+    background-color: #A9A9A9; 
     cursor: pointer;
-    color: #D25A29; /* Terracota para o texto ao passar o mouse */
+    color: #D25A29; 
 }
 
 

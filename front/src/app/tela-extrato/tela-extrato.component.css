@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #e98d58; /* Laranjinha claro */
+    background-color: #e98d58;
 }
 
 .cabecalho {
@@ -17,7 +17,7 @@ body {
     width: 100%;
     height: 130px;
     color: white;
-    background-color: #D25A29; /* Terracota */
+    background-color: #D25A29; 
     display: flex;
     align-items: center;
     padding-left: 20px;
@@ -56,18 +56,18 @@ body {
 }
 
 .cabecalho__conteudo {
-    margin-left: 20px; /* Alinha o texto com o botão de menu */
+    margin-left: 20px; 
     font-size: 40px;
 }
 
 .cabecalho__botao-sair {
-    margin-left: auto; /* Isso empurra o botão para a extrema direita */
+    margin-left: auto; 
 }
 
 .extrato-container {
     font-family: "Oswald", sans-serif;
-    width: 80%; /* Ajuste conforme necessário */
-    margin: 20px auto; /* Centraliza o container */
+    width: 80%; 
+    margin: 20px auto; 
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -94,26 +94,26 @@ body {
 }
 
 .extrato-table th {
-    background-color: #D25A29; /* Terracota */
+    background-color: #D25A29; 
     color: white;
 }
 
 .extrato-table tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* Destaque ao passar o mouse */
+    background-color: rgba(0, 0, 0, 0.05); 
 }
 
 .voltar-button {
     width: 100%;
     padding: 10px;
-    margin-top: 20px; /* Espaçamento acima do botão */
-    background-color: #D25A29; /* Cor do botão, pode ser a mesma do cabeçalho */
-    color: white; /* Cor do texto */
+    margin-top: 20px; 
+    background-color: #D25A29; 
+    color: white; 
     border: none;
-    border-radius: 5px; /* Arredondamento das bordas */
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transição suave */
+    transition: background-color 0.3s; 
 }
 
 .voltar-button:hover {
-    background-color: #b04d1f; /* Cor mais escura ao passar o mouse */
+    background-color: #b04d1f; 
 }
