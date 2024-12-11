@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TelaInicialComponent {
   sidebarOpen: boolean = false;
-  saldoVisivel: boolean = false; 
+  saldoVisivel: boolean = false;
 
   constructor(private router: Router) {}
 
@@ -44,6 +44,6 @@ export class TelaInicialComponent {
   }
 
   toggleSaldo() {
-    this.saldoVisivel = !this.saldoVisivel; 
+    this.saldoVisivel = !this.saldoVisivel;
   }
 }
